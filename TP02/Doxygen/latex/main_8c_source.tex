@@ -1,0 +1,71 @@
+\hypertarget{main_8c_source}{}\doxysection{main.\+c}
+\label{main_8c_source}\index{C:/Users/marca/Desktop/Programacao-\/de-\/Hardware/TP02/TP02\_170810/TP02\_170810/main.c@{C:/Users/marca/Desktop/Programacao-\/de-\/Hardware/TP02/TP02\_170810/TP02\_170810/main.c}}
+\mbox{\hyperlink{main_8c}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001 \textcolor{comment}{/****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00002}00002 \textcolor{comment}{ * Copyright (C) 2020 by Programacao de Hardware Engenharia de computacao   *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00003}00003 \textcolor{comment}{ *                                                                          *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00004}00004 \textcolor{comment}{ * This file is part of TP02.                                               *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00005}00005 \textcolor{comment}{ *                                                                          *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00006}00006 \textcolor{comment}{ * TP02 e um software livre: voce pode redistribui-\/lo e / ou modifica-\/lo    *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00007}00007 \textcolor{comment}{ * sob os termos da GNU Lesser General Public License conforme publicada    *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00008}00008 \textcolor{comment}{ * pela Free Software Foundation, seja a versao 3 da Licenca, ou            *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00009}00009 \textcolor{comment}{ * (a sua escolha) qualquer versao posterior.                               *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00010}00010 \textcolor{comment}{ *                                                                          *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00011}00011 \textcolor{comment}{ * O TP02 e distribuido na esperanca de que seja util,                      *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00012}00012 \textcolor{comment}{ * mas SEM QUALQUER GARANTIA; sem mesmo a garantia implicita de             *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00013}00013 \textcolor{comment}{ * COMERCIALIZACAO ou ADEQUACAO A UM DETERMINADO FIM. Veja o                *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00014}00014 \textcolor{comment}{ * GNU Lesser General Public License para obter mais detalhes.              *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}00015 \textcolor{comment}{ *                                                                          *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}00016 \textcolor{comment}{ * Voce deve ter recebido uma copia do GNU Lesser General Public            *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}00017 \textcolor{comment}{ * Licen�a junto com TP02. Caso contrario, consulte                         *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018 \textcolor{comment}{ *<http://www.gnu.org/licenses/>.                                           *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019 \textcolor{comment}{ * <https://www.doxygen.nl/manual/index.html>                               *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020 \textcolor{comment}{ ****************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}00044 \textcolor{preprocessor}{\#include <avr/io.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048 \textcolor{keywordtype}{char} estadoPino;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}\mbox{\hyperlink{main_8c_a90ece707c1f1854def5f4497d24e467e}{00050}} \textcolor{keywordtype}{char} \mbox{\hyperlink{main_8c_a90ece707c1f1854def5f4497d24e467e}{aux0}}; }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}\mbox{\hyperlink{main_8c_aa883376e983f7fe11b8770e8d00989c6}{00051}} \textcolor{keywordtype}{char} \mbox{\hyperlink{main_8c_aa883376e983f7fe11b8770e8d00989c6}{aux1}}; }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}\mbox{\hyperlink{main_8c_abb7cf35e9e8cbc17f92986ea5afa81e9}{00052}} \textcolor{keywordtype}{char} \mbox{\hyperlink{main_8c_abb7cf35e9e8cbc17f92986ea5afa81e9}{aux2}}; }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00053}\mbox{\hyperlink{main_8c_aa2c24fb32df583a3668545ea9ed3a689}{00053}} \textcolor{keywordtype}{char} \mbox{\hyperlink{main_8c_aa2c24fb32df583a3668545ea9ed3a689}{aux3}}; }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00055}\mbox{\hyperlink{main_8c_a2e2401156a9a51c096651b64a8731149}{00055}} \textcolor{keywordtype}{char} \mbox{\hyperlink{main_8c_a2e2401156a9a51c096651b64a8731149}{portaUsuario}}; }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00056}\mbox{\hyperlink{main_8c_a151fded20ff89410b36e9a80a0060a49}{00056}} \textcolor{keywordtype}{char} \mbox{\hyperlink{main_8c_a151fded20ff89410b36e9a80a0060a49}{portaUsuario1}}; }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00057}\mbox{\hyperlink{main_8c_aec50685aabd697485c2f2f2e1a7fa2ef}{00057}} \textcolor{keywordtype}{char} \mbox{\hyperlink{main_8c_aec50685aabd697485c2f2f2e1a7fa2ef}{pinoUsuario}}; }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00058}\mbox{\hyperlink{main_8c_a893cac426202f0cb8919929cbbc9fa66}{00058}} \textcolor{keywordtype}{char} \mbox{\hyperlink{main_8c_a893cac426202f0cb8919929cbbc9fa66}{pinoUsuario1}}; }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00060}\mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{00060}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00061}00061 \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00062}00062     printf(\textcolor{stringliteral}{"{}Digite a porta que o sensor esta conectado (B, C ou D): "{}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00063}00063     scanf(\textcolor{stringliteral}{"{}\%s"{}},\&\mbox{\hyperlink{main_8c_a2e2401156a9a51c096651b64a8731149}{portaUsuario}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00064}00064     \mbox{\hyperlink{main_8c_aa883376e983f7fe11b8770e8d00989c6}{aux1}} = strcat(\textcolor{stringliteral}{'PORT'}, \mbox{\hyperlink{main_8c_a2e2401156a9a51c096651b64a8731149}{portaUsuario}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00066}00066     printf(\textcolor{stringliteral}{"{}Digite o valor do pino de 0 a 7: "{}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00067}00067     scanf(\textcolor{stringliteral}{"{}\%s"{}},\&\mbox{\hyperlink{main_8c_aec50685aabd697485c2f2f2e1a7fa2ef}{pinoUsuario}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00068}00068     \mbox{\hyperlink{main_8c_a90ece707c1f1854def5f4497d24e467e}{aux0}} = strcat(\textcolor{stringliteral}{'DDR'}, \mbox{\hyperlink{main_8c_aec50685aabd697485c2f2f2e1a7fa2ef}{pinoUsuario}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00070}00070     printf(\textcolor{stringliteral}{"{}Digite o valor do pino de 0 a 7 para o sensor: "{}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00071}00071     scanf(\textcolor{stringliteral}{"{}\%s"{}},\&\mbox{\hyperlink{main_8c_a893cac426202f0cb8919929cbbc9fa66}{pinoUsuario1}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00072}00072     \mbox{\hyperlink{main_8c_abb7cf35e9e8cbc17f92986ea5afa81e9}{aux2}} = strcat(\textcolor{stringliteral}{'DDR'}, \mbox{\hyperlink{main_8c_a893cac426202f0cb8919929cbbc9fa66}{pinoUsuario1}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00074}00074     printf(\textcolor{stringliteral}{"{}Digite a porta que o sensor esta conectado (B, C ou D) para o sensor: "{}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00075}00075     scanf(\textcolor{stringliteral}{"{}\%s"{}},\&\mbox{\hyperlink{main_8c_a151fded20ff89410b36e9a80a0060a49}{portaUsuario1}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00076}00076     \mbox{\hyperlink{main_8c_aa2c24fb32df583a3668545ea9ed3a689}{aux3}} = strcat(\textcolor{stringliteral}{'PIN'}, \mbox{\hyperlink{main_8c_a151fded20ff89410b36e9a80a0060a49}{portaUsuario1}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00078}00078     \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00079}00079      }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00080}00080     \mbox{\hyperlink{main_8c_aa883376e983f7fe11b8770e8d00989c6}{aux1}} |= (1 << DDB4); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00081}00081     estadoPino = PINC4; }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00083}00083     \textcolor{keywordflow}{while} (1) }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00084}00084     \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00085}00085         \textcolor{keywordtype}{int} sensor = \mbox{\hyperlink{main_8c_aa2c24fb32df583a3668545ea9ed3a689}{aux3}} \& (1 << \mbox{\hyperlink{main_8c_aa2c24fb32df583a3668545ea9ed3a689}{aux3}});            }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00087}00087         \textcolor{keywordflow}{if}(sensor == 0)\{ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00088}00088             \mbox{\hyperlink{main_8c_aa883376e983f7fe11b8770e8d00989c6}{aux1}} \&= \string~(1 << \mbox{\hyperlink{main_8c_aa883376e983f7fe11b8770e8d00989c6}{aux1}});   }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00089}00089         \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00090}00090         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00091}00091             \mbox{\hyperlink{main_8c_aa883376e983f7fe11b8770e8d00989c6}{aux1}} |= (1 << \mbox{\hyperlink{main_8c_aa883376e983f7fe11b8770e8d00989c6}{aux1}});    }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00092}00092         \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00093}00093     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00094}00094 \};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00095}00095 }
+
+\end{DoxyCode}
